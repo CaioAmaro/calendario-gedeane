@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Limpeza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">Calendário de Limpeza</h1>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <label>Mês:</label>
+                <select id="monthSelect" class="form-control"></select>
+            </div>
+            <div class="col-md-6">
+                <label>Ano:</label>
+                <input type="number" id="yearInput" class="form-control" value="2023">
+            </div>
+        </div>
+
+        <button id="generateButton" class="btn btn-primary mt-3">Gerar Calendário</button>
+
+        <div id="calendar" class="mt-4"></div>
+
+        <h2 class="mt-4">Adicionar Funcionários</h2>
+        <input type="text" id="workerName" class="form-control" placeholder="Nome do Funcionário">
+        <button id="addWorkerButton" class="btn btn-success mt-2">Adicionar Funcionário</button>
+        
+        <ul id="workerList" class="mt-2"></ul>
+
+        <h2 class="mt-4">Marcar Férias</h2>
+        <select id="vacationSelect" class="form-control mt-2"></select>
+        <input type="date" id="vacationStartDate" class="form-control mt-2">
+        <input type="date" id="vacationEndDate" class="form-control mt-2">
+        <button id="markVacationButton" class="btn btn-warning mt-2">Marcar Férias</button>
+
+        <h2 class="mt-4">Adicionar Feriado</h2>
+        <input type="date" id="holidayDate" class="form-control mt-2">
+        <input type="text" id="holidayName" class="form-control mt-2" placeholder="Nome do Feriado">
+        <select id="holidayType" class="form-control mt-2">
+            <option value="Feriado">Feriado</option>
+            <option value="Ponto Facultativo">Ponto Facultativo</option>
+        </select>
+        <button id="addHolidayButton" class="btn btn-info mt-2">Adicionar Feriado</button>
+
+        <h2 class="mt-4">Anotações</h2>
+        <ul id="notesList"></ul>
+
+        <button id="printButton" class="btn btn-secondary mt-3">Imprimir</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
